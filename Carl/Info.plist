@@ -36,5 +36,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Carl is hungry, you don&apos;t want to be eaten sure, but at least give him a chance?</string>
 </dict>
 </plist>
