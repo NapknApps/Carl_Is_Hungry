@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>85D44BC8-AF2A-47DC-BE32-B489FBEBAD7C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F681BF83CCB7A1F34241014370A5211DBFB8AD9A</key>
+		<string>https://github.com/NapknApps/Carl.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Carl.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F681BF83CCB7A1F34241014370A5211DBFB8AD9A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/NapknApps/Carl.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F681BF83CCB7A1F34241014370A5211DBFB8AD9A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F681BF83CCB7A1F34241014370A5211DBFB8AD9A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Carl</string>
+		</dict>
+	</array>
+</dict>
+</plist>

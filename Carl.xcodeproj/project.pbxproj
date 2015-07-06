@@ -14,6 +14,8 @@
 		D3122CD21B4B128600D2BDA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3122CD11B4B128600D2BDA2 /* Images.xcassets */; };
 		D3122CD51B4B128600D2BDA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3122CD31B4B128600D2BDA2 /* LaunchScreen.xib */; };
 		D3122CE11B4B128600D2BDA2 /* CarlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CE01B4B128600D2BDA2 /* CarlTests.m */; };
+		D3122CEC1B4B145200D2BDA2 /* CarlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEB1B4B145200D2BDA2 /* CarlManager.m */; };
+		D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEE1B4B146C00D2BDA2 /* Carl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		D3122CDA1B4B128600D2BDA2 /* CarlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3122CDF1B4B128600D2BDA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3122CE01B4B128600D2BDA2 /* CarlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlTests.m; sourceTree = "<group>"; };
+		D3122CEA1B4B145200D2BDA2 /* CarlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarlManager.h; sourceTree = "<group>"; };
+		D3122CEB1B4B145200D2BDA2 /* CarlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarlManager.m; sourceTree = "<group>"; };
+		D3122CED1B4B146C00D2BDA2 /* Carl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carl.h; sourceTree = "<group>"; };
+		D3122CEE1B4B146C00D2BDA2 /* Carl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				D3122CC91B4B128600D2BDA2 /* AppDelegate.m */,
 				D3122CCB1B4B128600D2BDA2 /* ViewController.h */,
 				D3122CCC1B4B128600D2BDA2 /* ViewController.m */,
+				D3122CEA1B4B145200D2BDA2 /* CarlManager.h */,
+				D3122CEB1B4B145200D2BDA2 /* CarlManager.m */,
+				D3122CED1B4B146C00D2BDA2 /* Carl.h */,
+				D3122CEE1B4B146C00D2BDA2 /* Carl.m */,
 				D3122CCE1B4B128600D2BDA2 /* Main.storyboard */,
 				D3122CD11B4B128600D2BDA2 /* Images.xcassets */,
 				D3122CD31B4B128600D2BDA2 /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */,
 				D3122CCD1B4B128600D2BDA2 /* ViewController.m in Sources */,
+				D3122CEC1B4B145200D2BDA2 /* CarlManager.m in Sources */,
 				D3122CCA1B4B128600D2BDA2 /* AppDelegate.m in Sources */,
 				D3122CC71B4B128600D2BDA2 /* main.m in Sources */,
 			);
