@@ -10,4 +10,12 @@
 
 @implementation Carl
 
+@synthesize name = _name;
+@synthesize location = _location;
+
+- (NSString *)name
+{
+    return [NSString stringWithFormat:@"Carl"];
+}
+
 @end

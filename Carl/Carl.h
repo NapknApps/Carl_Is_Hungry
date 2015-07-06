@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Carl : NSObject
+
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) CLLocation *location;
 
 @end
