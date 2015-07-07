@@ -51,4 +51,14 @@
     return meters / 111303.0;
 }
 
++ (int)metersFromLatitude:(float)latitude
+{
+    return latitude * 110575.0;
+}
+
++ (int)metersFromLongitude:(float)longitude
+{
+    return longitude * 111303.0;
+}
+
 @end

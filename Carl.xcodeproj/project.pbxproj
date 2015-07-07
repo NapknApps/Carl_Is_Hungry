@@ -18,6 +18,9 @@
 		D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEE1B4B146C00D2BDA2 /* Carl.m */; };
 		D3122CF11B4B15C200D2BDA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */; };
 		D3122CF51B4B281300D2BDA2 /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CF41B4B281300D2BDA2 /* LocationHelper.m */; };
+		D3122CF81B4C634800D2BDA2 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CF71B4C634800D2BDA2 /* MapView.m */; };
+		D3122CFD1B4C69E000D2BDA2 /* FadeUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */; };
+		D3122D001B4C6D4400D2BDA2 /* FadeDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D3122CF31B4B281300D2BDA2 /* LocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
 		D3122CF41B4B281300D2BDA2 /* LocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
+		D3122CF61B4C634800D2BDA2 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		D3122CF71B4C634800D2BDA2 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		D3122CFB1B4C69E000D2BDA2 /* FadeUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeUpView.h; sourceTree = "<group>"; };
+		D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeUpView.m; sourceTree = "<group>"; };
+		D3122CFE1B4C6D4400D2BDA2 /* FadeDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeDownView.h; sourceTree = "<group>"; };
+		D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeDownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,7 @@
 				D3122CEE1B4B146C00D2BDA2 /* Carl.m */,
 				D3122CF31B4B281300D2BDA2 /* LocationHelper.h */,
 				D3122CF41B4B281300D2BDA2 /* LocationHelper.m */,
+				D3122CF91B4C634D00D2BDA2 /* Views */,
 				D3122CCE1B4B128600D2BDA2 /* Main.storyboard */,
 				D3122CD11B4B128600D2BDA2 /* Images.xcassets */,
 				D3122CD31B4B128600D2BDA2 /* LaunchScreen.xib */,
@@ -144,6 +154,19 @@
 				D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3122CF91B4C634D00D2BDA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3122CF61B4C634800D2BDA2 /* MapView.h */,
+				D3122CF71B4C634800D2BDA2 /* MapView.m */,
+				D3122CFE1B4C6D4400D2BDA2 /* FadeDownView.h */,
+				D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */,
+				D3122CFB1B4C69E000D2BDA2 /* FadeUpView.h */,
+				D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +271,13 @@
 			files = (
 				D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */,
 				D3122CCD1B4B128600D2BDA2 /* ViewController.m in Sources */,
+				D3122D001B4C6D4400D2BDA2 /* FadeDownView.m in Sources */,
 				D3122CEC1B4B145200D2BDA2 /* CarlManager.m in Sources */,
 				D3122CCA1B4B128600D2BDA2 /* AppDelegate.m in Sources */,
+				D3122CF81B4C634800D2BDA2 /* MapView.m in Sources */,
 				D3122CF51B4B281300D2BDA2 /* LocationHelper.m in Sources */,
 				D3122CC71B4B128600D2BDA2 /* main.m in Sources */,
+				D3122CFD1B4C69E000D2BDA2 /* FadeUpView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +359,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cdb3926f-1044-4327-9a9b-a09ebe2d05ae";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -371,7 +397,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cdb3926f-1044-4327-9a9b-a09ebe2d05ae";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -450,6 +476,7 @@
 				D3122CE61B4B128600D2BDA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3122CE71B4B128600D2BDA2 /* Build configuration list for PBXNativeTarget "CarlTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +485,7 @@
 				D3122CE91B4B128600D2BDA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

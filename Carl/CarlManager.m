@@ -11,6 +11,8 @@
 #import "LocationHelper.h"
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define CARL_METERS_PER_SECOND 1.0
+#define UPDATE_CARL_INTERVAL_SECONDS 5.0
 
 @interface CarlManager () <CLLocationManagerDelegate>
 
@@ -43,19 +45,19 @@
     #endif
     
     [self.locationManager startUpdatingLocation];
+    [self.locationManager startUpdatingHeading];
 }
 
 - (void)updateCarlsETA
 {
     // If Carl does not have a location yet let's place him on the map somewhere close. Should be 5-10 miles away from the user.
-    // TODO: Need to address the concept of walking towards vs away from Carl.
     
     if (self.carl.location == nil) {
         
         // For now we'll just add a bit to the coordinates.
         // TODO: Make proper distances and randomize them between the above started 5-10 miles.
 
-        self.carl.location = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude + .01 longitude:self.locationManager.location.coordinate.longitude + .01];
+        self.carl.location = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude + [LocationHelper latitudeFromMeters:4000] longitude:self.locationManager.location.coordinate.longitude + [LocationHelper longitudeFromMeters:4000]];
     }
     
     // Now Carl needs a destination, which is you!
@@ -64,14 +66,13 @@
     
     // Move Carl towards his destination.
     
-    self.carl.location = [LocationHelper moveLocation:self.carl.location towardsLocation:self.carlsCurrentDestination meters:10];
+    self.carl.location = [LocationHelper moveLocation:self.carl.location towardsLocation:self.carlsCurrentDestination meters:UPDATE_CARL_INTERVAL_SECONDS * CARL_METERS_PER_SECOND];
     
     CLLocationDistance metersApart = [self.carl.location distanceFromLocation:self.locationManager.location];
-
-    // NSLog(@"Carl is this far away in miles: %f", metersApart / 1609.34);
-    // NSLog(@"Carl is this far away in meters: %f", metersApart);
+    CLLocationDistance metersNorth = [LocationHelper metersFromLatitude:self.carl.location.coordinate.latitude - self.locationManager.location.coordinate.latitude];
+    CLLocationDistance metersEast = [LocationHelper metersFromLongitude:self.carl.location.coordinate.longitude - self.locationManager.location.coordinate.longitude];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"CarlUpdatedDistanceFromUser" object:[NSNumber numberWithFloat:metersApart]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"CarlUpdatedDistanceFromUser" object:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:metersApart], @"metersApart", [NSNumber numberWithFloat:metersNorth], @"metersNorth", [NSNumber numberWithFloat:metersEast], @"metersEast", nil]];
 }
 
 #pragma mark Singleton Methods
@@ -95,7 +96,7 @@
         [self startUpdatingUserLocataion];
         [self updateCarlsETA];
         
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:(self) selector:@selector(updateCarlsETA) userInfo:nil repeats:YES];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_CARL_INTERVAL_SECONDS target:(self) selector:@selector(updateCarlsETA) userInfo:nil repeats:YES];
     }
     return self;
 }
@@ -128,6 +129,11 @@
     //[locations lastObject];
     
     //NSLog(@"%@", [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude]);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUpdatedHeading" object:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:newHeading.magneticHeading], @"newMagneticHeading", nil]];
 }
 
 @end

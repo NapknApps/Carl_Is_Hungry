@@ -14,5 +14,7 @@
 + (CLLocation *)moveLocation:(CLLocation *)location1 towardsLocation:(CLLocation *)location2 meters:(int)meters;
 + (float)latitudeFromMeters:(int)meters;
 + (float)longitudeFromMeters:(int)meters;
++ (int)metersFromLatitude:(float)latitude;
++ (int)metersFromLongitude:(float)longitude;
 
 @end
