@@ -314,7 +314,7 @@
                 UILocalNotification *notification = [[UILocalNotification alloc] init];
                 notification.fireDate = [attackedDate dateByAddingTimeInterval:-60 * 60 * 4];
                 notification.soundName = UILocalNotificationDefaultSoundName;
-                notification.alertBody = @"Carl is far away. Breath easy.";
+                notification.alertBody = @"Carl is far away. Breathe easy.";
                 [self scheduleNotificationIfInFuture:notification];
             }
 

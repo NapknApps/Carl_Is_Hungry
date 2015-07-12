@@ -29,7 +29,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>FacebookAppID</key>
 	<string>1620358041545035</string>
 	<key>FacebookDisplayName</key>
@@ -37,7 +37,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Carl is hungry, you don&apos;t want to be eaten sure, but at least give him a chance?</string>
+	<string>Carl is hungry, you don't want to be eaten sure, but at least give him a chance?</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>coders_crux.ttf</string>
