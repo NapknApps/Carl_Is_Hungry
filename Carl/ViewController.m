@@ -135,7 +135,7 @@
     NSDate *eatenDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"eatenDate"];
     int secondsLived = [eatenDate timeIntervalSinceDate:startDate];
     
-    NSString *shareText = [NSString stringWithFormat:@"Carl ate me. I survived %.2f mins. #CarlAteMe #Carl👾", secondsLived / 60.0];
+    NSString *shareText = [NSString stringWithFormat:@"Carl ate me. I survived %.2f hours. #CarlAteMe #Carl👾", secondsLived / 60.0 / 60.0];
     
     NSMutableArray *sharingItems = [NSMutableArray new];
     
