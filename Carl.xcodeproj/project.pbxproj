@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B53FD25A6869EAE36CFA91ED /* libPods-Carl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4FEF5D03EF14127253704E /* libPods-Carl.a */; };
 		D3122CC71B4B128600D2BDA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CC61B4B128600D2BDA2 /* main.m */; };
 		D3122CCA1B4B128600D2BDA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CC91B4B128600D2BDA2 /* AppDelegate.m */; };
 		D3122CCD1B4B128600D2BDA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CCC1B4B128600D2BDA2 /* ViewController.m */; };
@@ -14,13 +15,20 @@
 		D3122CD21B4B128600D2BDA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3122CD11B4B128600D2BDA2 /* Images.xcassets */; };
 		D3122CD51B4B128600D2BDA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3122CD31B4B128600D2BDA2 /* LaunchScreen.xib */; };
 		D3122CE11B4B128600D2BDA2 /* CarlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CE01B4B128600D2BDA2 /* CarlTests.m */; };
-		D3122CEC1B4B145200D2BDA2 /* CarlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEB1B4B145200D2BDA2 /* CarlManager.m */; };
+		D3122CEC1B4B145200D2BDA2 /* LocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEB1B4B145200D2BDA2 /* LocationsManager.m */; };
 		D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CEE1B4B146C00D2BDA2 /* Carl.m */; };
 		D3122CF11B4B15C200D2BDA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */; };
 		D3122CF51B4B281300D2BDA2 /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CF41B4B281300D2BDA2 /* LocationHelper.m */; };
 		D3122CF81B4C634800D2BDA2 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CF71B4C634800D2BDA2 /* MapView.m */; };
-		D3122CFD1B4C69E000D2BDA2 /* FadeUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */; };
-		D3122D001B4C6D4400D2BDA2 /* FadeDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */; };
+		D32C1BCF1B5062A6003A34E6 /* coders_crux.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D32C1BCE1B5060F0003A34E6 /* coders_crux.ttf */; };
+		D32C1BD21B517C78003A34E6 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32C1BD11B517C78003A34E6 /* LeaderboardViewController.m */; };
+		D33D3B231B51816400DD45DC /* LeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D33D3B221B51816400DD45DC /* LeaderTableViewCell.m */; };
+		D33D3B251B518E5200DD45DC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33D3B241B518E5200DD45DC /* AudioToolbox.framework */; };
+		D37CF5861B4CEDE600259790 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D37CF5851B4CEDE600259790 /* User.m */; };
+		D37DC97D1B4ED986009AE3B9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DC97C1B4ED986009AE3B9 /* FBSDKCoreKit.framework */; };
+		D37DC97F1B4ED992009AE3B9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DC97E1B4ED992009AE3B9 /* FBSDKLoginKit.framework */; };
+		D37DC9811B4ED99F009AE3B9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DC9801B4ED99F009AE3B9 /* FBSDKShareKit.framework */; };
+		D37DC9841B4EDB6B009AE3B9 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F4FEF5D03EF14127253704E /* libPods-Carl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Carl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61EA3C6F501AB01E73DFC112 /* Pods-Carl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carl/Pods-Carl.debug.xcconfig"; sourceTree = "<group>"; };
 		D3122CC11B4B128600D2BDA2 /* Carl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3122CC51B4B128600D2BDA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3122CC61B4B128600D2BDA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,8 +57,8 @@
 		D3122CDA1B4B128600D2BDA2 /* CarlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3122CDF1B4B128600D2BDA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3122CE01B4B128600D2BDA2 /* CarlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlTests.m; sourceTree = "<group>"; };
-		D3122CEA1B4B145200D2BDA2 /* CarlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarlManager.h; sourceTree = "<group>"; };
-		D3122CEB1B4B145200D2BDA2 /* CarlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarlManager.m; sourceTree = "<group>"; };
+		D3122CEA1B4B145200D2BDA2 /* LocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsManager.h; sourceTree = "<group>"; };
+		D3122CEB1B4B145200D2BDA2 /* LocationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsManager.m; sourceTree = "<group>"; };
 		D3122CED1B4B146C00D2BDA2 /* Carl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carl.h; sourceTree = "<group>"; };
 		D3122CEE1B4B146C00D2BDA2 /* Carl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carl.m; sourceTree = "<group>"; };
 		D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -56,10 +66,20 @@
 		D3122CF41B4B281300D2BDA2 /* LocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
 		D3122CF61B4C634800D2BDA2 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		D3122CF71B4C634800D2BDA2 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
-		D3122CFB1B4C69E000D2BDA2 /* FadeUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeUpView.h; sourceTree = "<group>"; };
-		D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeUpView.m; sourceTree = "<group>"; };
-		D3122CFE1B4C6D4400D2BDA2 /* FadeDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeDownView.h; sourceTree = "<group>"; };
-		D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeDownView.m; sourceTree = "<group>"; };
+		D32C1BCE1B5060F0003A34E6 /* coders_crux.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = coders_crux.ttf; sourceTree = "<group>"; };
+		D32C1BD01B517C78003A34E6 /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
+		D32C1BD11B517C78003A34E6 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
+		D33D3B211B51816400DD45DC /* LeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderTableViewCell.h; sourceTree = "<group>"; };
+		D33D3B221B51816400DD45DC /* LeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderTableViewCell.m; sourceTree = "<group>"; };
+		D33D3B241B518E5200DD45DC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D37CF5841B4CEDE600259790 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D37CF5851B4CEDE600259790 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D37DC97C1B4ED986009AE3B9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D37DC97E1B4ED992009AE3B9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D37DC9801B4ED99F009AE3B9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		D37DC9821B4EDB6B009AE3B9 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		F8C241B8E91799723554A299 /* Pods-Carl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carl/Pods-Carl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33D3B251B518E5200DD45DC /* AudioToolbox.framework in Frameworks */,
 				D3122CF11B4B15C200D2BDA2 /* CoreLocation.framework in Frameworks */,
+				D37DC97D1B4ED986009AE3B9 /* FBSDKCoreKit.framework in Frameworks */,
+				D37DC9811B4ED99F009AE3B9 /* FBSDKShareKit.framework in Frameworks */,
+				D37DC97F1B4ED992009AE3B9 /* FBSDKLoginKit.framework in Frameworks */,
+				B53FD25A6869EAE36CFA91ED /* libPods-Carl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +113,7 @@
 				D3122CF21B4B15CE00D2BDA2 /* Frameworks */,
 				D3122CDD1B4B128600D2BDA2 /* CarlTests */,
 				D3122CC21B4B128600D2BDA2 /* Products */,
+				D85BF21A92E0407B8BBEA8BD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +131,13 @@
 			children = (
 				D3122CC81B4B128600D2BDA2 /* AppDelegate.h */,
 				D3122CC91B4B128600D2BDA2 /* AppDelegate.m */,
-				D3122CCB1B4B128600D2BDA2 /* ViewController.h */,
-				D3122CCC1B4B128600D2BDA2 /* ViewController.m */,
-				D3122CEA1B4B145200D2BDA2 /* CarlManager.h */,
-				D3122CEB1B4B145200D2BDA2 /* CarlManager.m */,
-				D3122CED1B4B146C00D2BDA2 /* Carl.h */,
-				D3122CEE1B4B146C00D2BDA2 /* Carl.m */,
-				D3122CF31B4B281300D2BDA2 /* LocationHelper.h */,
-				D3122CF41B4B281300D2BDA2 /* LocationHelper.m */,
+				D33D3B2A1B52C5DE00DD45DC /* Helpers */,
+				D33D3B291B52C5D500DD45DC /* Managers */,
+				D33D3B281B52C5C800DD45DC /* Model */,
+				D33D3B271B52C5AF00DD45DC /* Controllers */,
+				D33D3B261B52C5A600DD45DC /* Cells */,
 				D3122CF91B4C634D00D2BDA2 /* Views */,
+				D32C1BCE1B5060F0003A34E6 /* coders_crux.ttf */,
 				D3122CCE1B4B128600D2BDA2 /* Main.storyboard */,
 				D3122CD11B4B128600D2BDA2 /* Images.xcassets */,
 				D3122CD31B4B128600D2BDA2 /* LaunchScreen.xib */,
@@ -151,7 +175,12 @@
 		D3122CF21B4B15CE00D2BDA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D33D3B241B518E5200DD45DC /* AudioToolbox.framework */,
+				D37DC97C1B4ED986009AE3B9 /* FBSDKCoreKit.framework */,
+				D37DC97E1B4ED992009AE3B9 /* FBSDKLoginKit.framework */,
+				D37DC9801B4ED99F009AE3B9 /* FBSDKShareKit.framework */,
 				D3122CF01B4B15C200D2BDA2 /* CoreLocation.framework */,
+				4F4FEF5D03EF14127253704E /* libPods-Carl.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,12 +190,68 @@
 			children = (
 				D3122CF61B4C634800D2BDA2 /* MapView.h */,
 				D3122CF71B4C634800D2BDA2 /* MapView.m */,
-				D3122CFE1B4C6D4400D2BDA2 /* FadeDownView.h */,
-				D3122CFF1B4C6D4400D2BDA2 /* FadeDownView.m */,
-				D3122CFB1B4C69E000D2BDA2 /* FadeUpView.h */,
-				D3122CFC1B4C69E000D2BDA2 /* FadeUpView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D33D3B261B52C5A600DD45DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D33D3B211B51816400DD45DC /* LeaderTableViewCell.h */,
+				D33D3B221B51816400DD45DC /* LeaderTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D33D3B271B52C5AF00DD45DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3122CCB1B4B128600D2BDA2 /* ViewController.h */,
+				D3122CCC1B4B128600D2BDA2 /* ViewController.m */,
+				D37DC9821B4EDB6B009AE3B9 /* LogInViewController.h */,
+				D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */,
+				D32C1BD01B517C78003A34E6 /* LeaderboardViewController.h */,
+				D32C1BD11B517C78003A34E6 /* LeaderboardViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D33D3B281B52C5C800DD45DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3122CED1B4B146C00D2BDA2 /* Carl.h */,
+				D3122CEE1B4B146C00D2BDA2 /* Carl.m */,
+				D37CF5841B4CEDE600259790 /* User.h */,
+				D37CF5851B4CEDE600259790 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D33D3B291B52C5D500DD45DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D3122CEA1B4B145200D2BDA2 /* LocationsManager.h */,
+				D3122CEB1B4B145200D2BDA2 /* LocationsManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		D33D3B2A1B52C5DE00DD45DC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D3122CF31B4B281300D2BDA2 /* LocationHelper.h */,
+				D3122CF41B4B281300D2BDA2 /* LocationHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D85BF21A92E0407B8BBEA8BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61EA3C6F501AB01E73DFC112 /* Pods-Carl.debug.xcconfig */,
+				F8C241B8E91799723554A299 /* Pods-Carl.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3122CE41B4B128600D2BDA2 /* Build configuration list for PBXNativeTarget "Carl" */;
 			buildPhases = (
+				307820F8F16BB5F347E51A2A /* Check Pods Manifest.lock */,
 				D3122CBD1B4B128600D2BDA2 /* Sources */,
 				D3122CBE1B4B128600D2BDA2 /* Frameworks */,
 				D3122CBF1B4B128600D2BDA2 /* Resources */,
+				F0A3B9679A81C5249CF1D79C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,9 +305,15 @@
 				TargetAttributes = {
 					D3122CC01B4B128600D2BDA2 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D3122CD91B4B128600D2BDA2 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = SWECN289V2;
 						TestTargetID = D3122CC01B4B128600D2BDA2;
 					};
 				};
@@ -249,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32C1BCF1B5062A6003A34E6 /* coders_crux.ttf in Resources */,
 				D3122CD01B4B128600D2BDA2 /* Main.storyboard in Resources */,
 				D3122CD51B4B128600D2BDA2 /* LaunchScreen.xib in Resources */,
 				D3122CD21B4B128600D2BDA2 /* Images.xcassets in Resources */,
@@ -264,20 +358,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		307820F8F16BB5F347E51A2A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0A3B9679A81C5249CF1D79C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carl/Pods-Carl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3122CBD1B4B128600D2BDA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37CF5861B4CEDE600259790 /* User.m in Sources */,
 				D3122CEF1B4B146C00D2BDA2 /* Carl.m in Sources */,
 				D3122CCD1B4B128600D2BDA2 /* ViewController.m in Sources */,
-				D3122D001B4C6D4400D2BDA2 /* FadeDownView.m in Sources */,
-				D3122CEC1B4B145200D2BDA2 /* CarlManager.m in Sources */,
+				D3122CEC1B4B145200D2BDA2 /* LocationsManager.m in Sources */,
 				D3122CCA1B4B128600D2BDA2 /* AppDelegate.m in Sources */,
 				D3122CF81B4C634800D2BDA2 /* MapView.m in Sources */,
+				D37DC9841B4EDB6B009AE3B9 /* LogInViewController.m in Sources */,
 				D3122CF51B4B281300D2BDA2 /* LocationHelper.m in Sources */,
+				D33D3B231B51816400DD45DC /* LeaderTableViewCell.m in Sources */,
 				D3122CC71B4B128600D2BDA2 /* main.m in Sources */,
-				D3122CFD1B4C69E000D2BDA2 /* FadeUpView.m in Sources */,
+				D32C1BD21B517C78003A34E6 /* LeaderboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +465,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -359,7 +488,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "cdb3926f-1044-4327-9a9b-a09ebe2d05ae";
+				PROVISIONING_PROFILE = "d9a355be-d1a5-4ca1-a340-b7037bb823ab";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -381,8 +510,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -397,7 +526,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "cdb3926f-1044-4327-9a9b-a09ebe2d05ae";
+				PROVISIONING_PROFILE = "d9a355be-d1a5-4ca1-a340-b7037bb823ab";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -405,21 +534,37 @@
 		};
 		D3122CE51B4B128600D2BDA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EA3C6F501AB01E73DFC112 /* Pods-Carl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zachwhelchel/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Carl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "930f550d-d86e-47dd-8446-ace7e2638a3e";
 			};
 			name = Debug;
 		};
 		D3122CE61B4B128600D2BDA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C241B8E91799723554A299 /* Pods-Carl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zachwhelchel/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Carl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "930f550d-d86e-47dd-8446-ace7e2638a3e";
 			};
 			name = Release;
 		};
@@ -427,6 +572,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -438,6 +585,7 @@
 				INFOPLIST_FILE = CarlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carl.app/Carl";
 			};
 			name = Debug;
@@ -446,6 +594,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -453,6 +603,7 @@
 				INFOPLIST_FILE = CarlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carl.app/Carl";
 			};
 			name = Release;
