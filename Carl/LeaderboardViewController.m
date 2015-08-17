@@ -77,7 +77,7 @@
     
     for (NSDictionary *leader in array) {
         
-        NSDate *appLaunchDate = [NSDate dateWithTimeIntervalSince1970:1437264000];
+        NSDate *appLaunchDate = [NSDate dateWithTimeIntervalSince1970:1440374400];
         NSDate *currentDate = [NSDate date];
         
         // Check for cheaters, doesnt solve whole problem, but at least can't cheat past the anticipated launch maximum time app is out.
@@ -118,13 +118,15 @@
     cell.aliveLabel.font = [UIFont fontWithName:@"Coder's Crux" size:30];
     [cell.aliveLabel setTextColor:[UIColor greenColor]];
 
-    if ([leader valueForKey:@"eatenDate"] != nil) {
-        [cell.leaderLabel setText:[NSString stringWithFormat:@"Eaten - %@", [leader valueForKey:@"name"]]];
-    }
-    else {
-        [cell.leaderLabel setText:[NSString stringWithFormat:@"Alive - %@", [leader valueForKey:@"name"]]];
-    }
+//    if ([leader valueForKey:@"eatenDate"] != nil) {
+//        [cell.leaderLabel setText:[NSString stringWithFormat:@"Eaten - %@", [leader valueForKey:@"name"]]];
+//    }
+//    else {
+//        [cell.leaderLabel setText:[NSString stringWithFormat:@"Alive - %@", [leader valueForKey:@"name"]]];
+//    }
     
+    [cell.leaderLabel setText:[NSString stringWithFormat:@"%@", [leader valueForKey:@"name"]]];
+
     [cell.aliveLabel setText:[NSString stringWithFormat:@"Survived: %i hours", [[leader valueForKey:@"confirmedSecondsAlive"] intValue] / 60 / 60]];
 
     return cell;

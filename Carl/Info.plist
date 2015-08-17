@@ -29,7 +29,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>8</string>
 	<key>FacebookAppID</key>
 	<string>1620358041545035</string>
 	<key>FacebookDisplayName</key>
@@ -43,9 +43,7 @@
 		<string>coders_crux.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
+	<array/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

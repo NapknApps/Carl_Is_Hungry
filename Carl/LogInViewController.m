@@ -11,6 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "TwitterAuthHelper.h"
 
 @interface LogInViewController ()
 
@@ -79,7 +80,7 @@
     self.carlLabel.center = CGPointMake(self.view.center.x, self.view.center.y) ;
     [self.view addSubview:self.carlLabel];
     
-    self.titles = [NSArray arrayWithObjects:[NSString stringWithFormat:@"This is Carl."], [NSString stringWithFormat:@"Carl is hungry."], [NSString stringWithFormat:@"Carl eats people."], [NSString stringWithFormat:@"Carl would like to eat you."], [NSString stringWithFormat:@"Carl will chase you, wherever you go."], [NSString stringWithFormat:@"Carl is slow, but he never rests. He only creeps closer."], [NSString stringWithFormat:@"If Carl gets too close, you have 2 options..."], [NSString stringWithFormat:@"1) Open the app to run away quickly."], [NSString stringWithFormat:@"2) Invite a friend to distract Carl."], [NSString stringWithFormat:@"If you do not escape in time, Carl eats you."], [NSString stringWithFormat:@"The end. Game over. Forever. No second chances. No restarting."], [NSString stringWithFormat:@"Ready?"], [NSString stringWithFormat:@"First we need to enable a few things…"], nil];
+    self.titles = [NSArray arrayWithObjects:[NSString stringWithFormat:@"This is Carl."], [NSString stringWithFormat:@"Carl is hungry."], [NSString stringWithFormat:@"Carl eats people."], [NSString stringWithFormat:@"Carl would like to eat you."], [NSString stringWithFormat:@"Carl will chase you, wherever you go."], [NSString stringWithFormat:@"Carl is slow, but he never rests. He only creeps closer."], [NSString stringWithFormat:@"If Carl gets too close, you have 2 options..."], [NSString stringWithFormat:@"1) Open the app to run away quickly."], [NSString stringWithFormat:@"2) Invite a friend to distract Carl."], [NSString stringWithFormat:@"If you do not escape in time, Carl eats you."], [NSString stringWithFormat:@"Ready?"], [NSString stringWithFormat:@"First we need to enable a few things…"], nil];
     
     for (int i = 0; i < self.titles.count; i++) {
         
@@ -164,13 +165,13 @@
 
                     // Permadeath catcher
                     
-                    NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[[snapshot.value valueForKey:@"startDate"] doubleValue]];
-                    [[NSUserDefaults standardUserDefaults] setObject:startDate forKey:@"startDate"];
-
-                    NSDate *eatenDate = [NSDate dateWithTimeIntervalSince1970:[[snapshot.value valueForKey:@"eatenDate"] doubleValue]];
-                    [[NSUserDefaults standardUserDefaults] setObject:eatenDate forKey:@"eatenDate"];
-
-                    [[NSUserDefaults standardUserDefaults] synchronize];
+//                    NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[[snapshot.value valueForKey:@"startDate"] doubleValue]];
+//                    [[NSUserDefaults standardUserDefaults] setObject:startDate forKey:@"startDate"];
+//
+//                    NSDate *eatenDate = [NSDate dateWithTimeIntervalSince1970:[[snapshot.value valueForKey:@"eatenDate"] doubleValue]];
+//                    [[NSUserDefaults standardUserDefaults] setObject:eatenDate forKey:@"eatenDate"];
+//
+//                    [[NSUserDefaults standardUserDefaults] synchronize];
                 }
                 
                 [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"loginCompleted"];
@@ -222,45 +223,164 @@
 
 - (IBAction)facebookSelected:(id)sender
 {
-    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
-    FBSDKLoginManager *facebookLogin = [[FBSDKLoginManager alloc] init];
     
-    [facebookLogin logInWithReadPermissions:@[@"public_profile"]
-                                    handler:^(FBSDKLoginManagerLoginResult *facebookResult, NSError *facebookError) {
-                                        
-                                        if (facebookError) {
-                                            NSLog(@"Facebook login failed. Error: %@", facebookError);
-                                        } else if (facebookResult.isCancelled) {
-                                            NSLog(@"Facebook login got cancelled.");
-                                        } else {
-                                            NSString *accessToken = [[FBSDKAccessToken currentAccessToken] tokenString];
-                                            
-                                            [ref authWithOAuthProvider:@"facebook" token:accessToken
-                                                   withCompletionBlock:^(NSError *error, FAuthData *authData) {
-                                                       
-                                                       if (error) {
-                                                           NSLog(@"Login failed. %@", error);
-                                                       } else {
-                                                           NSLog(@"Logged in! %@", authData);
-                                                           
-                                                           
-                                                           [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
-                                                            startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-                                                                
-                                                                if (!error) {
-                                                                    
-                                                                    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
-                                                                    if (ref.authData) {
-                                                                        
-                                                                        ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://carlishungry.firebaseio.com/users/%@", [ref.authData uid]]];
-                                                                        [ref updateChildValues:[NSDictionary dictionaryWithObjectsAndKeys:result[@"name"], @"name", nil]];
-                                                                    }
-                                                                }
-                                                            }];
-                                                       }
-                                                   }];
-                                        }
-                                    }];
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Account"
+                                          message:@"Choose a sign in method."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    
+    UIAlertAction *facebookAction = [UIAlertAction
+                                   actionWithTitle:@"Facebook"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       
+                                       Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
+                                       FBSDKLoginManager *facebookLogin = [[FBSDKLoginManager alloc] init];
+                                       
+                                       [facebookLogin logInWithReadPermissions:@[@"public_profile"]
+                                                                       handler:^(FBSDKLoginManagerLoginResult *facebookResult, NSError *facebookError) {
+                                                                           
+                                                                           if (facebookError) {
+                                                                               NSLog(@"Facebook login failed. Error: %@", facebookError);
+                                                                           } else if (facebookResult.isCancelled) {
+                                                                               NSLog(@"Facebook login got cancelled.");
+                                                                           } else {
+                                                                               NSString *accessToken = [[FBSDKAccessToken currentAccessToken] tokenString];
+                                                                               
+                                                                               [ref authWithOAuthProvider:@"facebook" token:accessToken
+                                                                                      withCompletionBlock:^(NSError *error, FAuthData *authData) {
+                                                                                          
+                                                                                          if (error) {
+                                                                                              NSLog(@"Login failed. %@", error);
+                                                                                          } else {
+                                                                                              NSLog(@"Logged in! %@", authData);
+                                                                                              
+                                                                                              
+                                                                                              [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+                                                                                               startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+                                                                                                   
+                                                                                                   if (!error) {
+                                                                                                       
+                                                                                                       Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
+                                                                                                       if (ref.authData) {
+                                                                                                           
+                                                                                                           ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://carlishungry.firebaseio.com/users/%@", [ref.authData uid]]];
+                                                                                                           [ref updateChildValues:[NSDictionary dictionaryWithObjectsAndKeys:result[@"name"], @"name", nil]];
+                                                                                                       }
+                                                                                                   }
+                                                                                               }];
+                                                                                          }
+                                                                                      }];
+                                                                           }
+                                                                       }];
+
+                                       
+                                       
+                                   }];
+    
+    [alertController addAction:facebookAction];
+
+    UIAlertAction *twitterAction = [UIAlertAction
+                                     actionWithTitle:@"Username"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction *action)
+                                     {
+                                         
+                                         
+                                         UIAlertController *alertController2 = [UIAlertController
+                                                                               alertControllerWithTitle:@"Username" message:@"Enter a username:" preferredStyle:UIAlertControllerStyleAlert];
+
+                                         
+                                         
+                                         
+                                         [alertController2 addTextFieldWithConfigurationHandler:^(UITextField *K2TextField)
+                                          {
+                                              K2TextField.placeholder = @"Username";
+                                          }];
+                                         
+                                         
+                                         UIAlertAction *okAction = [UIAlertAction
+                                                                          actionWithTitle:@"OK"
+                                                                          style:UIAlertActionStyleDefault
+                                                                          handler:^(UIAlertAction *action)
+                                                                          {
+                                                                              
+                                                                              if ([[alertController2.textFields firstObject] text].length > 0) {
+                                                                                  Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
+                                                                                  [ref authAnonymouslyWithCompletionBlock:^(NSError *error, FAuthData *authData) {
+                                                                                      if (error) {
+                                                                                          // There was an error logging in anonymously
+                                                                                      } else {
+                                                                                          // We are now logged in
+                                                                                          
+                                                                                          Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
+                                                                                          if (ref.authData) {
+                                                                                              ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://carlishungry.firebaseio.com/users/%@", [ref.authData uid]]];
+                                                                                              [ref updateChildValues:[NSDictionary dictionaryWithObjectsAndKeys:[[alertController2.textFields firstObject] text], @"name", nil]];
+                                                                                          }
+                                                                                          
+                                                                                      }
+                                                                                  }];
+                                                                              }
+                                                                              
+
+                                                                          }];
+                                         
+                                         [alertController2 addAction:okAction];
+
+                                         
+                                         
+                                         UIAlertAction *cancelAction = [UIAlertAction
+                                                                        actionWithTitle:@"Cancel"
+                                                                        style:UIAlertActionStyleCancel
+                                                                        handler:^(UIAlertAction *action)
+                                                                        {
+                                                                            
+                                                                        }];
+                                         
+                                         [alertController2 addAction:cancelAction];
+                                         
+
+                                         
+                                         [self presentViewController:alertController2 animated:YES completion:nil];
+
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                         
+                                     }];
+    
+    [alertController addAction:twitterAction];
+
+    
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       
+                                   }];
+    
+    [alertController addAction:cancelAction];
+
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+
+    
+    
+    
     
 }
 

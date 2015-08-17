@@ -44,5 +44,6 @@ typedef enum {
 - (BOOL)canSleep;
 - (void)startRunning;
 - (void)relocateCarlCloseForTesting;
+- (void)restart;
 
 @end

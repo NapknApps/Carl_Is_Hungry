@@ -29,6 +29,7 @@
 		D37DC97F1B4ED992009AE3B9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DC97E1B4ED992009AE3B9 /* FBSDKLoginKit.framework */; };
 		D37DC9811B4ED99F009AE3B9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DC9801B4ED99F009AE3B9 /* FBSDKShareKit.framework */; };
 		D37DC9841B4EDB6B009AE3B9 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */; };
+		D3B2E95D1B7025A700EED1D3 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B2E95C1B7025A700EED1D3 /* TwitterAuthHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		D37DC9801B4ED99F009AE3B9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D37DC9821B4EDB6B009AE3B9 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		D3B2E95B1B7025A700EED1D3 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
+		D3B2E95C1B7025A700EED1D3 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
 		F8C241B8E91799723554A299 /* Pods-Carl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carl/Pods-Carl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +215,8 @@
 				D37DC9831B4EDB6B009AE3B9 /* LogInViewController.m */,
 				D32C1BD01B517C78003A34E6 /* LeaderboardViewController.h */,
 				D32C1BD11B517C78003A34E6 /* LeaderboardViewController.m */,
+				D3B2E95B1B7025A700EED1D3 /* TwitterAuthHelper.h */,
+				D3B2E95C1B7025A700EED1D3 /* TwitterAuthHelper.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				D3122CCA1B4B128600D2BDA2 /* AppDelegate.m in Sources */,
 				D3122CF81B4C634800D2BDA2 /* MapView.m in Sources */,
 				D37DC9841B4EDB6B009AE3B9 /* LogInViewController.m in Sources */,
+				D3B2E95D1B7025A700EED1D3 /* TwitterAuthHelper.m in Sources */,
 				D3122CF51B4B281300D2BDA2 /* LocationHelper.m in Sources */,
 				D33D3B231B51816400DD45DC /* LeaderTableViewCell.m in Sources */,
 				D3122CC71B4B128600D2BDA2 /* main.m in Sources */,
@@ -537,7 +543,7 @@
 			baseConfigurationReference = 61EA3C6F501AB01E73DFC112 /* Pods-Carl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Napkn, Ltd. Co. (SWECN289V2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/zachwhelchel/Documents/FacebookSDK,
@@ -555,7 +561,7 @@
 			baseConfigurationReference = F8C241B8E91799723554A299 /* Pods-Carl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Napkn, Ltd. Co. (SWECN289V2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/zachwhelchel/Documents/FacebookSDK,

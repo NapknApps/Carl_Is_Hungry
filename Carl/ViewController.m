@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *leaderboardButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UIButton *restartButton;
 
 @end
 
@@ -49,7 +50,8 @@
     self.leaderboardButton.hidden = YES;
     self.shareButton.hidden = YES;
     self.testButton.hidden = YES;
-    
+    self.restartButton.hidden = YES;
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userStatusUpdated:) name:@"UserStatusUpdated" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userUpdatedHeading:) name:@"UserUpdatedHeading" object:nil];
     
@@ -73,6 +75,9 @@
     [self.shareButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     self.testButton.titleLabel.font = [UIFont fontWithName:@"Coder's Crux" size:40];
     [self.testButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    self.restartButton.titleLabel.font = [UIFont fontWithName:@"Coder's Crux" size:40];
+    [self.restartButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -82,6 +87,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+//    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://carlishungry.firebaseio.com"];
+//    [ref unauth];
+    
     UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
 
     self.textView.hidden = YES;
@@ -127,6 +135,12 @@
     if (self.locationsManager.userStatus == Safe) {
         [self.locationsManager relocateCarlCloseForTesting];
     }
+}
+
+- (IBAction)restartSelected:(id)sender
+{
+    [self.locationsManager restart];
+    [self.carlLabel setText:@"👾"];
 }
 
 - (IBAction)shareSelected:(id)sender
@@ -219,7 +233,7 @@
 }
 
 - (void)update
-{
+{    
     if (self.locationsManager.userStatus == Safe) {
         self.runButton.hidden = YES;
         self.distractButton.hidden = YES;
@@ -232,6 +246,7 @@
         self.leaderboardButton.hidden = NO;
         self.shareButton.hidden = YES;
         self.testButton.hidden = YES;
+        self.restartButton.hidden = YES;
     }
     else if (self.locationsManager.userStatus == UnderAttack) {
         self.runButton.hidden = NO;
@@ -240,6 +255,7 @@
         self.leaderboardButton.hidden = YES;
         self.shareButton.hidden = YES;
         self.testButton.hidden = YES;
+        self.restartButton.hidden = YES;
 
         [self transitionToAttackedMode];
     }
@@ -250,6 +266,7 @@
         self.leaderboardButton.hidden = YES;
         self.shareButton.hidden = YES;
         self.testButton.hidden = YES;
+        self.restartButton.hidden = YES;
 
         [self transitionToAttackedMode];
     }
@@ -260,6 +277,8 @@
         self.leaderboardButton.hidden = NO;
         self.shareButton.hidden = NO;
         self.testButton.hidden = YES;
+        self.restartButton.hidden = NO;
+
         [self transitionToEatenMode];
     }
     else if (self.locationsManager.userStatus == Unknown) {
@@ -269,6 +288,8 @@
         self.leaderboardButton.hidden = YES;
         self.shareButton.hidden = YES;
         self.testButton.hidden = YES;
+        self.restartButton.hidden = YES;
+
     }
     
     NSDate *attackedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"attackedDate"];

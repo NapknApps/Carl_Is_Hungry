@@ -214,7 +214,7 @@
 
             }
             else {
-                NSDate *eatenDate = [attackedDate dateByAddingTimeInterval:60 * 5];
+                NSDate *eatenDate = [attackedDate dateByAddingTimeInterval:60 * 5]; //60 * 5
                 [[NSUserDefaults standardUserDefaults] setObject:eatenDate forKey:@"eatenDate"];
             }
             [[NSUserDefaults standardUserDefaults] synchronize];
@@ -242,6 +242,24 @@
             }
         }
     }
+}
+
+- (void)restart
+{
+    [self.timer invalidate];
+    
+    self.userStatus = Safe;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"carlLastMoved"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"carlsLocation"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"runningFromLocation"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"eatenDate"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"attackedDate"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usersLocation"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"startDate"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"carlLastMovedFromSleep"];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_USER_STATUS_INTERVAL_SECONDS target:(self) selector:@selector(updateUserStatus) userInfo:nil repeats:YES];
 }
 
 - (void)updateNotifications
@@ -399,8 +417,8 @@
 
 - (void)relocateCarlCloseForTesting
 {
-    float additionalLatitude = [LocationHelper latitudeFromMeters:[LocationHelper randomMetersCountBetweenWithMinMeters:30 maxMeters:40]];
-    float additionalLongitude = [LocationHelper longitudeFromMeters:[LocationHelper randomMetersCountBetweenWithMinMeters:30 maxMeters:40]];
+    float additionalLatitude = [LocationHelper latitudeFromMeters:[LocationHelper randomMetersCountBetweenWithMinMeters:4 maxMeters:5]];
+    float additionalLongitude = [LocationHelper longitudeFromMeters:[LocationHelper randomMetersCountBetweenWithMinMeters:4 maxMeters:5]];
     
     [self.carl setLatitude:[self.user location].coordinate.latitude + additionalLatitude longitude:[self.user location].coordinate.longitude + additionalLongitude];
     
